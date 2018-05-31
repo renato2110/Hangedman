@@ -1,0 +1,10 @@
+C:\Users\b54076\Documents\Hangedman\Hangedman\bin\Debug\Hangedman.exe.config
+C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.csprojResolveAssemblyReference.cache
+C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.Properties.Resources.resources
+C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.csproj.GenerateResource.Cache
+C:\Users\b54076\Documents\Hangedman\Hangedman\bin\Debug\Hangedman.exe
+C:\Users\b54076\Documents\Hangedman\Hangedman\bin\Debug\Hangedman.pdb
+C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.exe
+C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.pdb
+C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.landing.resources
+C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.Records.resources

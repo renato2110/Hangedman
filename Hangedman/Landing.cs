@@ -18,7 +18,8 @@ namespace Hangedman
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            Game game = new Game();
+            game.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)

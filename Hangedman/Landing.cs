@@ -31,5 +31,10 @@ namespace Hangedman
         {
 
         }
+
+        private void landing_name_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

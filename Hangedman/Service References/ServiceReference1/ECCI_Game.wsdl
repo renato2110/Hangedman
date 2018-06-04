@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ECCI_Game" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="ECCI_Game" targetNamespace="urn:ECCI_Game" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:ECCI_Game" />
+  </wsdl:types>
+  <wsdl:message name="getWordIn" />
+  <wsdl:message name="getWordOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getTriesIn" />
+  <wsdl:message name="getTriesOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="generateWordIn" />
+  <wsdl:message name="generateWordOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkWordIn">
+    <wsdl:part name="character" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkWordOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getRecordsIn" />
+  <wsdl:message name="getRecordsOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkRecordIn">
+    <wsdl:part name="newPlayer" type="xsd:string" />
+    <wsdl:part name="newRecord" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkRecordOut" />
+  <wsdl:portType name="ECCI_GamePort">
+    <wsdl:operation name="getWord">
+      <documentation>Game::getWord() Returns the hidden word.</documentation>
+      <wsdl:input message="tns:getWordIn" />
+      <wsdl:output message="tns:getWordOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTries">
+      <documentation>Game::getTries() Returns the remaining tries</documentation>
+      <wsdl:input message="tns:getTriesIn" />
+      <wsdl:output message="tns:getTriesOut" />
+    </wsdl:operation>
+    <wsdl:operation name="generateWord">
+      <documentation>Game::generateWord() Generates the word to start the game.</documentation>
+      <wsdl:input message="tns:generateWordIn" />
+      <wsdl:output message="tns:generateWordOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkWord">
+      <documentation>Game::checkWord() Checks if the user entered a character that belongs to the hidden word.</documentation>
+      <wsdl:input message="tns:checkWordIn" />
+      <wsdl:output message="tns:checkWordOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecords">
+      <documentation>Game::getRecords() Returns the top ten players.</documentation>
+      <wsdl:input message="tns:getRecordsIn" />
+      <wsdl:output message="tns:getRecordsOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkRecord">
+      <documentation>Game::checkRecord() Checks if the user entered to records.</documentation>
+      <wsdl:input message="tns:checkRecordIn" />
+      <wsdl:output message="tns:checkRecordOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ECCI_GameBinding" type="tns:ECCI_GamePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getWord">
+      <soap:operation soapAction="urn:ECCI_Game#Game#getWord" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTries">
+      <soap:operation soapAction="urn:ECCI_Game#Game#getTries" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateWord">
+      <soap:operation soapAction="urn:ECCI_Game#Game#generateWord" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkWord">
+      <soap:operation soapAction="urn:ECCI_Game#Game#checkWord" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkRecord">
+      <soap:operation soapAction="urn:ECCI_Game#Game#checkRecord" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecords">
+      <soap:operation soapAction="urn:ECCI_Game#Game#getRecords" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ECCI_GameService">
+    <wsdl:port name="ECCI_GamePort" binding="tns:ECCI_GameBinding">
+      <soap:address location="http://titanic.ecci.ucr.ac.cr/~eb42190/Hangedman/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

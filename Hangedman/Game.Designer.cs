@@ -89,7 +89,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button12);
             this.flowLayoutPanel1.Controls.Add(this.button13);
             this.flowLayoutPanel1.Controls.Add(this.button14);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(103, 938);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(103, 972);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1414, 105);
             this.flowLayoutPanel1.TabIndex = 1;
@@ -202,6 +202,7 @@
             this.button9.TabIndex = 10;
             this.button9.Text = "I";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -280,7 +281,7 @@
             this.flowLayoutPanel2.Controls.Add(this.button52);
             this.flowLayoutPanel2.Controls.Add(this.button53);
             this.flowLayoutPanel2.Controls.Add(this.button54);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(143, 1041);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(143, 1075);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1312, 105);
             this.flowLayoutPanel2.TabIndex = 29;
@@ -503,7 +504,7 @@
             this.word_label.BackColor = System.Drawing.Color.Transparent;
             this.word_label.Font = new System.Drawing.Font("Gentium Basic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.word_label.ForeColor = System.Drawing.Color.White;
-            this.word_label.Location = new System.Drawing.Point(478, 233);
+            this.word_label.Location = new System.Drawing.Point(464, 192);
             this.word_label.Name = "word_label";
             this.word_label.Size = new System.Drawing.Size(695, 167);
             this.word_label.TabIndex = 34;

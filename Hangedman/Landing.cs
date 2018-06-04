@@ -26,5 +26,10 @@ namespace Hangedman
         {
             
         }
+
+        private void landing_title_label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

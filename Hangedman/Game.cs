@@ -12,9 +12,12 @@ namespace Hangedman
 {
     public partial class Game : Form
     {
-        public Game()
+        public Game(String playerName)
         {
             InitializeComponent();
+            if (!string.IsNullOrEmpty(playerName)) { 
+                player_name_label.Text = playerName;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +36,11 @@ namespace Hangedman
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

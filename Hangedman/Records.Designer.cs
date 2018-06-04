@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Records));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.records_back_button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.records_back_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,15 +71,16 @@
             this.panel1.Size = new System.Drawing.Size(748, 571);
             this.panel1.TabIndex = 1;
             // 
-            // records_back_button
+            // label2
             // 
-            this.records_back_button.Location = new System.Drawing.Point(286, 501);
-            this.records_back_button.Name = "records_back_button";
-            this.records_back_button.Size = new System.Drawing.Size(204, 41);
-            this.records_back_button.TabIndex = 2;
-            this.records_back_button.Text = "Back";
-            this.records_back_button.UseVisualStyleBackColor = true;
-            this.records_back_button.Click += new System.EventHandler(this.button1_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(463, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 40);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Record ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -91,16 +93,15 @@
             this.label1.Text = "Player";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // records_back_button
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(463, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 40);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Record ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.records_back_button.Location = new System.Drawing.Point(286, 501);
+            this.records_back_button.Name = "records_back_button";
+            this.records_back_button.Size = new System.Drawing.Size(204, 41);
+            this.records_back_button.TabIndex = 2;
+            this.records_back_button.Text = "Back";
+            this.records_back_button.UseVisualStyleBackColor = true;
+            this.records_back_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // Records
             // 
@@ -108,6 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 598);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Records";
             this.Text = "Records";
             this.panel1.ResumeLayout(false);

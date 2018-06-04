@@ -18,7 +18,7 @@ namespace Hangedman
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Game game = new Game();
+            Game game = new Game(landing_name_textBox.Text);
             game.ShowDialog();
         }
 

@@ -13,10 +13,12 @@ namespace Hangedman
     public partial class Game : Form
     {
         private ServiceReference1.ECCI_GamePortClient server;
+        private Landing landing;
 
-        public Game(String playerName)
+        public Game(String playerName, Landing landing)
         {
             this.server = new ServiceReference1.ECCI_GamePortClient();
+            this.landing = landing;
             InitializeComponent();
             if (!string.IsNullOrEmpty(playerName)) { 
                 player_name_label.Text = playerName;
@@ -27,8 +29,7 @@ namespace Hangedman
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Landing landing = new Landing();
-            landing.Show();
+            this.landing.Show();
         }
 
         private void CheckWord(String word)

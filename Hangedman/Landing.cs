@@ -12,14 +12,14 @@ namespace Hangedman
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Records records = new Records();
+            Records records = new Records(this);
             this.Hide();
             records.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Game game = new Game(landing_name_textBox.Text);
+            Game game = new Game(landing_name_textBox.Text, this);
             this.Hide();
             game.Show();
         }

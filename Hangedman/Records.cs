@@ -13,9 +13,12 @@ namespace Hangedman
 {
     public partial class Records : Form
     {
-        public Records()
+        private Landing landing;
+
+        public Records(Landing landing)
         {
             InitializeComponent();
+            this.landing = landing;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -40,14 +43,12 @@ namespace Hangedman
 
         private void landing_startGame_button_Click(object sender, EventArgs e)
         {
-            Landing landing = new Landing();
-            this.Hide();
+            this.Close();
             landing.Show();
         }
 
         private void Records_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Landing landing = new Landing();
             landing.Show();
         }
     }

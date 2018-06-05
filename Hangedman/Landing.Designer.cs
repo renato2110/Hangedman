@@ -43,11 +43,11 @@
             // landing_name_textBox
             // 
             this.landing_name_textBox.BackColor = System.Drawing.Color.White;
-            this.landing_name_textBox.Font = new System.Drawing.Font("Gentium Basic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.landing_name_textBox.Location = new System.Drawing.Point(159, 357);
+            this.landing_name_textBox.Font = new System.Drawing.Font("Gentium Basic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.landing_name_textBox.Location = new System.Drawing.Point(159, 354);
             this.landing_name_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.landing_name_textBox.Name = "landing_name_textBox";
-            this.landing_name_textBox.Size = new System.Drawing.Size(123, 20);
+            this.landing_name_textBox.Size = new System.Drawing.Size(123, 26);
             this.landing_name_textBox.TabIndex = 1;
             this.landing_name_textBox.TextChanged += new System.EventHandler(this.landing_name_textBox_TextChanged);
             // 

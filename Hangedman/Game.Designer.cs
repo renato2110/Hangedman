@@ -62,12 +62,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tries_count = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.rigthLeg = new System.Windows.Forms.PictureBox();
+            this.leftArm = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.rightArm = new System.Windows.Forms.PictureBox();
+            this.head = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.word_label = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rigthLeg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftArm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightArm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.head)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -540,6 +552,12 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.rigthLeg);
+            this.panel1.Controls.Add(this.leftArm);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.rightArm);
+            this.panel1.Controls.Add(this.head);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.word_label);
@@ -554,10 +572,70 @@
             this.panel1.Size = new System.Drawing.Size(1066, 912);
             this.panel1.TabIndex = 34;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(811, 345);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 204);
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            // 
+            // rigthLeg
+            // 
+            this.rigthLeg.Image = ((System.Drawing.Image)(resources.GetObject("rigthLeg.Image")));
+            this.rigthLeg.Location = new System.Drawing.Point(732, 345);
+            this.rigthLeg.Margin = new System.Windows.Forms.Padding(2);
+            this.rigthLeg.Name = "rigthLeg";
+            this.rigthLeg.Size = new System.Drawing.Size(58, 209);
+            this.rigthLeg.TabIndex = 43;
+            this.rigthLeg.TabStop = false;
+            // 
+            // leftArm
+            // 
+            this.leftArm.Image = ((System.Drawing.Image)(resources.GetObject("leftArm.Image")));
+            this.leftArm.Location = new System.Drawing.Point(851, 197);
+            this.leftArm.Margin = new System.Windows.Forms.Padding(2);
+            this.leftArm.Name = "leftArm";
+            this.leftArm.Size = new System.Drawing.Size(71, 181);
+            this.leftArm.TabIndex = 42;
+            this.leftArm.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(741, 186);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(114, 162);
+            this.pictureBox3.TabIndex = 41;
+            this.pictureBox3.TabStop = false;
+            // 
+            // rightArm
+            // 
+            this.rightArm.Image = ((System.Drawing.Image)(resources.GetObject("rightArm.Image")));
+            this.rightArm.Location = new System.Drawing.Point(669, 197);
+            this.rightArm.Margin = new System.Windows.Forms.Padding(2);
+            this.rightArm.Name = "rightArm";
+            this.rightArm.Size = new System.Drawing.Size(74, 181);
+            this.rightArm.TabIndex = 40;
+            this.rightArm.TabStop = false;
+            // 
+            // head
+            // 
+            this.head.Image = ((System.Drawing.Image)(resources.GetObject("head.Image")));
+            this.head.Location = new System.Drawing.Point(715, 65);
+            this.head.Margin = new System.Windows.Forms.Padding(2);
+            this.head.Name = "head";
+            this.head.Size = new System.Drawing.Size(130, 115);
+            this.head.TabIndex = 38;
+            this.head.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(523, -8);
+            this.pictureBox1.Location = new System.Drawing.Point(523, -3);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(519, 623);
@@ -581,12 +659,12 @@
             // 
             this.word_label.AutoSize = true;
             this.word_label.BackColor = System.Drawing.Color.Transparent;
-            this.word_label.Font = new System.Drawing.Font("Gentium Basic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.word_label.Font = new System.Drawing.Font("Gentium Basic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.word_label.ForeColor = System.Drawing.Color.Red;
-            this.word_label.Location = new System.Drawing.Point(97, 227);
+            this.word_label.Location = new System.Drawing.Point(114, 227);
             this.word_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.word_label.Name = "word_label";
-            this.word_label.Size = new System.Drawing.Size(0, 111);
+            this.word_label.Size = new System.Drawing.Size(0, 56);
             this.word_label.TabIndex = 34;
             this.word_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -609,6 +687,12 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rigthLeg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftArm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightArm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.head)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -652,5 +736,11 @@
         private System.Windows.Forms.Label word_label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox rightArm;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox head;
+        private System.Windows.Forms.PictureBox leftArm;
+        private System.Windows.Forms.PictureBox rigthLeg;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

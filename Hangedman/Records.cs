@@ -37,5 +37,18 @@ namespace Hangedman
         {
 
         }
+
+        private void landing_startGame_button_Click(object sender, EventArgs e)
+        {
+            Landing landing = new Landing();
+            this.Hide();
+            landing.Show();
+        }
+
+        private void Records_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Landing landing = new Landing();
+            landing.Show();
+        }
     }
 }

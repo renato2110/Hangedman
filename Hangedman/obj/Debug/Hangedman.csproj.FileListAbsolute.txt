@@ -9,3 +9,4 @@ C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.pdb
 C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.landing.resources
 C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.Records.resources
 C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.Game.resources
+C:\Users\b54076\Documents\Hangedman\Hangedman\obj\Debug\Hangedman.GameOver.resources

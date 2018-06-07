@@ -18,6 +18,7 @@ namespace Hangedman
         public Game(String playerName, Landing landing)
         {
             this.server = new ServiceReference1.ECCI_GamePortClient();
+            this.server.resetGame();
             this.landing = landing;
             InitializeComponent();
             if (!string.IsNullOrEmpty(playerName)) { 
@@ -25,6 +26,17 @@ namespace Hangedman
             }            
            tries_count.Text = server.getTries();
            word_label.Text = server.getWord();
+        }
+
+        public void ResetGame()
+        {
+            for (int i = 0; i < this.Controls.Count; i++)
+            {
+                this.Controls[i].ResetText();
+            }
+            this.server.resetGame();
+            tries_count.Text = this.server.getTries();
+            word_label.Text = this.server.getWord();
         }
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
@@ -35,7 +47,51 @@ namespace Hangedman
         private void CheckWord(String word)
         {
             word_label.Text = this.server.checkWord(word);
-            tries_count.Text = server.getTries();
+            if (word_label.Text.Contains("_"))
+            {
+                this.CheckTries();
+            }
+            else
+            {
+                this.server.checkRecord(player_name_label.Text);
+                this.Hide();
+                GameOver gameover = new GameOver("Felicidades, has descubierto la palabra!!", player_name_label.Text, this, this.landing);
+                gameover.Show();
+            }
+        }
+
+        private void CheckTries()
+        {
+            if (!server.getTries().Equals(tries_count))
+            {
+                tries_count.Text = server.getTries();
+                switch (tries_count.Text) {
+                    case "5":
+                        head.Visible = true;
+                        break;
+                    case "4":
+                        chest.Visible = true;
+                        break;
+                    case "3":
+                        rightArm.Visible = true;
+                        break;
+                    case "2":
+                        leftArm.Visible = true;
+                        break;
+                    case "1":
+                        rightLeg.Visible = true;
+                        break;
+                    case "0":
+                        leftLeg.Visible = true;
+                        this.Hide();
+                        GameOver gameover = new GameOver("Has fallado, la palabra era:  "+this.server.getAnswer(), player_name_label.Text, this, this.landing);
+                        gameover.Show();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

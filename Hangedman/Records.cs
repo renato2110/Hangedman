@@ -19,6 +19,24 @@ namespace Hangedman
         {
             InitializeComponent();
             this.landing = landing;
+            this.fillTable();
+        }
+
+        private void fillTable()
+        {
+            ServiceReference1.ECCI_GamePortClient server = new ServiceReference1.ECCI_GamePortClient();
+            string records = server.getRecords();
+            string[] items = records.Split('\n');
+            foreach (string item in items)
+            {
+                if (!item.Equals("")) {
+                    Console.WriteLine(item + "!");
+                    string[] singleValue = item.Split('-');
+                    this.playersList.Items.Add(singleValue[0]);
+                    this.timesList.Items.Add(singleValue[1]);
+                }
+            }
+
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

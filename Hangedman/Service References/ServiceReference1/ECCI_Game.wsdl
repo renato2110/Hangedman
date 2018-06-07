@@ -3,6 +3,12 @@
   <wsdl:types>
     <xsd:schema targetNamespace="urn:ECCI_Game" />
   </wsdl:types>
+  <wsdl:message name="getAnswerIn" />
+  <wsdl:message name="getAnswerOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="resetGameIn" />
+  <wsdl:message name="resetGameOut" />
   <wsdl:message name="getWordIn" />
   <wsdl:message name="getWordOut">
     <wsdl:part name="return" type="xsd:string" />
@@ -27,10 +33,23 @@
   </wsdl:message>
   <wsdl:message name="checkRecordIn">
     <wsdl:part name="newPlayer" type="xsd:string" />
-    <wsdl:part name="newRecord" type="xsd:string" />
   </wsdl:message>
   <wsdl:message name="checkRecordOut" />
+  <wsdl:message name="getTimeIn" />
+  <wsdl:message name="getTimeOut">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
   <wsdl:portType name="ECCI_GamePort">
+    <wsdl:operation name="getAnswer">
+      <documentation>Game::getAnswer() Returns the word.</documentation>
+      <wsdl:input message="tns:getAnswerIn" />
+      <wsdl:output message="tns:getAnswerOut" />
+    </wsdl:operation>
+    <wsdl:operation name="resetGame">
+      <documentation>Game::resetGame() Resets the game.</documentation>
+      <wsdl:input message="tns:resetGameIn" />
+      <wsdl:output message="tns:resetGameOut" />
+    </wsdl:operation>
     <wsdl:operation name="getWord">
       <documentation>Game::getWord() Returns the hidden word.</documentation>
       <wsdl:input message="tns:getWordIn" />
@@ -61,9 +80,32 @@
       <wsdl:input message="tns:checkRecordIn" />
       <wsdl:output message="tns:checkRecordOut" />
     </wsdl:operation>
+    <wsdl:operation name="getTime">
+      <documentation>Game::getTime() Gets the time spent by the player guessing the word.</documentation>
+      <wsdl:input message="tns:getTimeIn" />
+      <wsdl:output message="tns:getTimeOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ECCI_GameBinding" type="tns:ECCI_GamePort">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getAnswer">
+      <soap:operation soapAction="urn:ECCI_Game#Game#getAnswer" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resetGame">
+      <soap:operation soapAction="urn:ECCI_Game#Game#resetGame" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getWord">
       <soap:operation soapAction="urn:ECCI_Game#Game#getWord" />
       <wsdl:input>
@@ -111,6 +153,15 @@
     </wsdl:operation>
     <wsdl:operation name="getRecords">
       <soap:operation soapAction="urn:ECCI_Game#Game#getRecords" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTime">
+      <soap:operation soapAction="urn:ECCI_Game#Game#getTime" />
       <wsdl:input>
         <soap:body use="encoded" namespace="urn:ECCI_Game" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>

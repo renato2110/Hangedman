@@ -62,25 +62,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tries_count = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.rigthLeg = new System.Windows.Forms.PictureBox();
+            this.chest = new System.Windows.Forms.PictureBox();
+            this.leftArm = new System.Windows.Forms.PictureBox();
+            this.leftLeg = new System.Windows.Forms.PictureBox();
+            this.rightLeg = new System.Windows.Forms.PictureBox();
             this.rightArm = new System.Windows.Forms.PictureBox();
             this.head = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.word_label = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rigthLeg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftArm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftLeg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightLeg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightArm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.head)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -520,10 +520,10 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.rigthLeg);
+            this.panel1.Controls.Add(this.chest);
+            this.panel1.Controls.Add(this.leftArm);
+            this.panel1.Controls.Add(this.leftLeg);
+            this.panel1.Controls.Add(this.rightLeg);
             this.panel1.Controls.Add(this.rightArm);
             this.panel1.Controls.Add(this.head);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -539,23 +539,45 @@
             this.panel1.Size = new System.Drawing.Size(1599, 1251);
             this.panel1.TabIndex = 34;
             // 
-            // pictureBox2
+            // chest
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1199, 548);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 338);
-            this.pictureBox2.TabIndex = 44;
-            this.pictureBox2.TabStop = false;
+            this.chest.Image = ((System.Drawing.Image)(resources.GetObject("chest.Image")));
+            this.chest.Location = new System.Drawing.Point(1103, 306);
+            this.chest.Name = "chest";
+            this.chest.Size = new System.Drawing.Size(174, 251);
+            this.chest.TabIndex = 47;
+            this.chest.TabStop = false;
+            this.chest.Visible = false;
             // 
-            // rigthLeg
+            // leftArm
             // 
-            this.rigthLeg.Image = ((System.Drawing.Image)(resources.GetObject("rigthLeg.Image")));
-            this.rigthLeg.Location = new System.Drawing.Point(1093, 548);
-            this.rigthLeg.Name = "rigthLeg";
-            this.rigthLeg.Size = new System.Drawing.Size(87, 405);
-            this.rigthLeg.TabIndex = 43;
-            this.rigthLeg.TabStop = false;
+            this.leftArm.Image = ((System.Drawing.Image)(resources.GetObject("leftArm.Image")));
+            this.leftArm.Location = new System.Drawing.Point(1267, 336);
+            this.leftArm.Name = "leftArm";
+            this.leftArm.Size = new System.Drawing.Size(107, 307);
+            this.leftArm.TabIndex = 46;
+            this.leftArm.TabStop = false;
+            this.leftArm.Visible = false;
+            // 
+            // leftLeg
+            // 
+            this.leftLeg.Image = ((System.Drawing.Image)(resources.GetObject("leftLeg.Image")));
+            this.leftLeg.Location = new System.Drawing.Point(1199, 548);
+            this.leftLeg.Name = "leftLeg";
+            this.leftLeg.Size = new System.Drawing.Size(87, 338);
+            this.leftLeg.TabIndex = 44;
+            this.leftLeg.TabStop = false;
+            this.leftLeg.Visible = false;
+            // 
+            // rightLeg
+            // 
+            this.rightLeg.Image = ((System.Drawing.Image)(resources.GetObject("rightLeg.Image")));
+            this.rightLeg.Location = new System.Drawing.Point(1093, 548);
+            this.rightLeg.Name = "rightLeg";
+            this.rightLeg.Size = new System.Drawing.Size(87, 338);
+            this.rightLeg.TabIndex = 43;
+            this.rightLeg.TabStop = false;
+            this.rightLeg.Visible = false;
             // 
             // rightArm
             // 
@@ -565,6 +587,7 @@
             this.rightArm.Size = new System.Drawing.Size(111, 307);
             this.rightArm.TabIndex = 40;
             this.rightArm.TabStop = false;
+            this.rightArm.Visible = false;
             // 
             // head
             // 
@@ -574,6 +597,7 @@
             this.head.Size = new System.Drawing.Size(195, 177);
             this.head.TabIndex = 38;
             this.head.TabStop = false;
+            this.head.Visible = false;
             // 
             // pictureBox1
             // 
@@ -608,24 +632,6 @@
             this.word_label.TabIndex = 34;
             this.word_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1103, 306);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(174, 251);
-            this.pictureBox6.TabIndex = 47;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1267, 336);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(107, 307);
-            this.pictureBox5.TabIndex = 46;
-            this.pictureBox5.TabStop = false;
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -644,13 +650,13 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rigthLeg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftArm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftLeg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightLeg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightArm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.head)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -695,9 +701,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox rightArm;
         private System.Windows.Forms.PictureBox head;
-        private System.Windows.Forms.PictureBox rigthLeg;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox rightLeg;
+        private System.Windows.Forms.PictureBox leftLeg;
+        private System.Windows.Forms.PictureBox chest;
+        private System.Windows.Forms.PictureBox leftArm;
     }
 }

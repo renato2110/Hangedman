@@ -23,8 +23,8 @@ namespace Hangedman
             if (!string.IsNullOrEmpty(playerName)) { 
                 player_name_label.Text = playerName;
             }            
-            tries_count.Text = server.getTries();
-            word_label.Text = server.getWord();
+           tries_count.Text = server.getTries();
+           word_label.Text = server.getWord();
         }
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
